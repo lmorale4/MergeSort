@@ -12,3 +12,11 @@ describe("Merge function",function(){
     expect(merge([3,5],[2,4])).toEqual([2,3,4,5]);
   })
 })
+describe("merge sort function", function(){
+  it("should return a sorted array of one element", function(){
+    expect(mergeSort([1])).toEqual([1]);
+  });
+  it("should return a sorted array of many elements", function(){
+    expect(mergeSort([3,5,2,4])).toEqual([2,3,4,5])
+  });
+})

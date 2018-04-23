@@ -24,4 +24,12 @@ function merge(array1, array2){
   return result
 }
 
-function mergeSort()
+function mergeSort(array){
+  if (array.length === 1) {return array}
+  else {
+    let splitted = split(array);
+    while (splitted.length > 1) {
+      splitted = split(splitted)
+    }
+  }
+}
