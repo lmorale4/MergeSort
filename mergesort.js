@@ -4,6 +4,7 @@ function split(array) {
   let secondHalf = array.slice(midpoint);
   return [firstHalf, secondHalf];
 }
+
 function merge(array1, array2) {
   let result = [];
   let i = 0;
@@ -18,11 +19,17 @@ function merge(array1, array2) {
     }
   }
   if (i < array1.length) {
-    result = result.concat(array1.slice(i));
+    concatArray(result, i, array1);
   } else if (j < array2.length) {
-    result = result.concat(array2.slice(j));
+    concatArray(result, j, array2);
   }
   return result;
+}
+
+function concatArray(array, start, concatArr) {
+  for (let i = start; i < concatArr.length; i++) {
+    array.push(concatArr[i]);
+  }
 }
 
 function mergeSort(array) {
